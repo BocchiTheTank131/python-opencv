@@ -1,1 +1,1 @@
-name = "idk"
+print("Hello World")
