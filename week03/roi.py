@@ -30,8 +30,10 @@ cv2.rectangle(img, (x1, y1), (x2, y2), (255,0,0),2)
 # .putText() = 1, "string" 2. ROI 3. font 4. font size 5. color RGB 6. line width
 cv2.putText(img,'my ROI area', (210, 90), cv2.FONT_HERSHEY_SIMPLEX, 0.8, (255,0,0), 2)
 
+# cropped roi
 roi_img = img[y1:y2,x1:x2]
 
+# show resuil
 cv2.imshow("Main image with grid", img)
 cv2.imshow("Cropped ROI", roi_img)
 
