@@ -15,5 +15,10 @@ result = cv2.bitwise_and(img, img, mask=mask)
 cv2.imshow("original", img)
 cv2.imshow("mask", mask)
 cv2.imshow("Result", result)
+
 cv2.waitKey(0)
 cv2.destroyAllWindows()
+
+"""
+HSV = Hue (Tone of color), Saturation (Vibrancy of color), Value (brightness)
+"""

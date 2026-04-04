@@ -1,26 +1,22 @@
 import cv2
 
-# open laptop webcam
 cap = cv2.VideoCapture(0)
 
 if not cap.read():
     print("Cannot open your webcam")
     
 while True:
-    # res = result
     res, frame = cap.read()
-    
-    #if didnt detech a camera
     if not res:
         print('cannot receive frame exiting....')
         break
     
-    # show the camera
-    cv2.imshow('webcam', frame)
+    gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
     
-    if cv2.waitKey(1) == ord('q'):
+    cv2.imshow('webcam', gray)
+    
+    if cv2.waitKey(1) & 0xFF == ord('q'):
         break
 
-# turn off camera
 cap.release()
 cv2.destroyAllWindows()

@@ -1,10 +1,12 @@
-import cv2
+import cv2     # import OpenCV
 
-img = cv2.imread("imgs\RTX_4090.jpg")
+img = cv2.imread("imgs\RTX_4090.jpg")     # read image
 
 # .flip() = 1. image (input), 2. 1: horizontally, 0: vertically
 img_flip = cv2.flip(img, 0)
 
+# show image img_flip
 cv2.imshow("flip",img_flip)
+
 cv2.waitKey(0)
 cv2.destroyAllWindows()
